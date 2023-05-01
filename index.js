@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.body.onload = addDrawingArea;
+
 });
 
+// create drawing area
 function addDrawingArea() {
     
     // select where to place div in the DOM
@@ -22,5 +24,23 @@ function addDrawingArea() {
         }
 
         drawArea.appendChild(newRow);
-    } 
+    }
+    draw();
+}
+
+// function to draw on the area
+function draw() {
+
+    // select the area where to draw
+    const drawArea = document.querySelectorAll('.pixel');
+    console.log(drawArea);
+
+    // check every pixel
+    drawArea.forEach(pixel => {
+        // if mouse enters the pixel
+        pixel.addEventListener('mouseenter', function() {
+            // make the pixel black
+            pixel.style.backgroundColor = 'black';
+        });
+    });
 }
