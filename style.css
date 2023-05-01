@@ -1,0 +1,19 @@
+.draw-area {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 400px;
+    height: 400px;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.pixel {
+    min-height: 20px;
+    min-width: 20px;
+    border: 1px solid darkgray;
+    flex: 1;
+}
